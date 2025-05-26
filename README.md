@@ -1,51 +1,88 @@
 # Nature-Image-Clustering1
-Academic Project – Intelligent Computing Fundamentals
-Ferdowsi University of Mashhad
+Here is a well-structured `README.md` text for your GitHub repository:
 
-📌 Overview
+---
+
+# 🌿 Nature Image Clustering using Visual Features
+
+**Academic Project – Intelligent Computing Fundamentals**
+**Ferdowsi University of Mashhad**
+
+## 📌 Overview
+
 This project focuses on unsupervised clustering of satellite images representing natural landscapes (e.g., desert, forest, beach, etc.) based on handcrafted visual features. It was developed entirely from scratch without using pre-trained models or built-in clustering evaluators.
 
-🚀 Key Features
-Feature Extraction
+## 🚀 Key Features
 
-Dominant color detection
+* **Feature Extraction**
 
-Texture and edge density analysis
+  * Dominant color detection
+  * Texture and edge density analysis
+  * Statistical descriptors (mean, variance, etc.)
 
-Statistical descriptors (mean, variance, etc.)
+* **Feature Selection**
 
-Feature Selection
+  * Correlation matrix computation
+  * Threshold-based filtering to reduce redundancy
 
-Correlation matrix computation
+* **Clustering Algorithms**
 
-Threshold-based filtering to reduce redundancy
+  * KMeans
+  * DBSCAN
+  * Agglomerative Clustering
+  * MeanShift
+  * All tuned manually for optimal performance
 
-Clustering Algorithms
+* **Evaluation**
 
-KMeans
+  * Self-implemented precision, recall, F1-score
+  * Silhouette Score
 
-DBSCAN
+* **Visualization**
 
-Agglomerative Clustering
+  * Cluster heatmaps
+  * Dimensionality reduction (e.g., PCA, t-SNE) for 2D plotting
 
-MeanShift
+* **Test Prediction**
 
-All tuned manually for optimal performance
+  * Classifies unseen data into trained clusters
+  * Saves output as CSV
 
-Evaluation
+## 📁 Structure
 
-Self-implemented precision, recall, F1-score
+```
+├── data/                # Dataset of satellite images
+├── features/            # Extracted features and selected feature vectors
+├── clustering/          # Implementation of all clustering algorithms
+├── evaluation/          # Custom evaluation metrics
+├── visualization/       # Heatmaps and reduced-dimensional plots
+├── prediction/          # Test image handling and prediction
+├── main.py              # Pipeline integration and execution
+└── README.md
+```
 
-Silhouette Score
+## 🛠️ Requirements
 
-Visualization
+* Python 3.x
+* NumPy, OpenCV, matplotlib, pandas, scikit-learn
 
-Cluster heatmaps
+Install dependencies using:
 
-Dimensionality reduction (e.g., PCA, t-SNE) for 2D plotting
+```bash
+pip install -r requirements.txt
+```
 
-Test Prediction
+## 📊 Sample Results
 
-Classifies unseen data into trained clusters
+* **Cluster Interpretability**: Forest-dominated clusters show high green channel means and dense texture patterns
+* **Silhouette Score**: Achieved \~0.52 using optimized KMeans
+* Test Accuracy**: Clusters show high internal consistency across various metrics
 
-Saves output as CSV
+## 👨‍💻 Authors
+
+* Mahdi Achli
+* Instructor: Dr. Sayed Kamaledin Ghiasi Shirazi
+
+---
+
+Let me know if you'd like badges (e.g., for license, Python version), example images, or Colab integration.
